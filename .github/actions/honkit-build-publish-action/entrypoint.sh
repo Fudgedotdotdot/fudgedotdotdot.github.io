@@ -31,10 +31,8 @@ git clean -fx node_modules
 git clean -fx _book
 git add .
 
-git status
-git log
-
-# git push --force # while on gh-pages
+git commit -a -m "Update docs"
+git push origin gh-pages --force
 
 
 # # checkout to the gh-pages branch
