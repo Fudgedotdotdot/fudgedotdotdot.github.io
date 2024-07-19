@@ -16,6 +16,11 @@ git config --global --add safe.directory /github/workspace
 honkit build
 ls -alt _book/
 
+
+git remote -v
+echo $(git config -l)
+
+
 # checkout to the gh-pages branch
 git checkout gh-pages
 
