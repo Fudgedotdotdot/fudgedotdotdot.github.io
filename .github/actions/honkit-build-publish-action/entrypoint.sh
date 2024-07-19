@@ -11,12 +11,11 @@
 
 echo '[INFO] Building static website...'
 cd ${GITHUB_WORKSPACE}
+git config --global --add safe.directory /github/workspace
 
 honkit build
 ls -alt _book/
 
-git branch
-id && whoami
 # checkout to the gh-pages branch
 git checkout gh-pages
 
