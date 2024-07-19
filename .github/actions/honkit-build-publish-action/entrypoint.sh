@@ -35,9 +35,10 @@ git add .
 git config --local user.name "Fudgedotdotdot"
 git config --local user.email "28399056+Fudgedotdotdot@users.noreply.github.com"
 
-git commit -a -m "Update docs"
-git push origin gh-pages --force
+git commit -m "Update docs"
+git push -u origin gh-pages
 
+git checkout main
 
 # # checkout to the gh-pages branch
 # git checkout gh-pages
