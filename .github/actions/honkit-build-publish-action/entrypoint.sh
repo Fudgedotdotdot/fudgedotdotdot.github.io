@@ -16,28 +16,28 @@ git config --global --add safe.directory /github/workspace
 honkit build
 ls -alt _book/
 
-
+echo $(git branch)
 git remote -v
 echo $(git config -l)
 
 
-# checkout to the gh-pages branch
-git checkout gh-pages
+# # checkout to the gh-pages branch
+# git checkout gh-pages
 
-# pull the latest updates
-git pull origin gh-pages --rebase
+# # pull the latest updates
+# git pull origin gh-pages --rebase
 
-# copy the static site files into the current directory.
-cp -R _book/* .
+# # copy the static site files into the current directory.
+# cp -R _book/* .
 
-# remove 'node_modules' and '_book' directory
-git clean -fx node_modules
-git clean -fx _book
+# # remove 'node_modules' and '_book' directory
+# git clean -fx node_modules
+# git clean -fx _book
 
-# add all files
-git add .
+# # add all files
+# git add .
 
-git log
+# git log
 
 
 # commit
