@@ -15,7 +15,8 @@ cd ${GITHUB_WORKSPACE}
 honkit build
 ls -alt _book/
 
-
+git branch
+id && whoami
 # checkout to the gh-pages branch
 git checkout gh-pages
 
