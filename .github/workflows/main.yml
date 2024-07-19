@@ -1,0 +1,19 @@
+name: Build and Publish Honkit blog
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout 🛎️
+      uses: actions/checkout@v2.3.1
+
+    - name: Build and Deploy 🚀
+      uses: fudgedotdotdot/honkit-build-publish-action@v0.0.1
