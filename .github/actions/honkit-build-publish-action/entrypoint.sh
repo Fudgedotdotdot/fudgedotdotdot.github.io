@@ -16,9 +16,25 @@ git config --global --add safe.directory /github/workspace
 honkit build
 ls -alt _book/
 
-echo $(git branch)
+git branch
 git remote -v
 echo $(git config -l)
+
+git fetch origin gh-pages --depth 1
+git checkout gh-pages
+git rebase main
+
+# now gh-pages and main are the same, prepare the correct directory structure for github pages
+cp -R _book/* .
+
+git clean -fx node_modules
+git clean -fx _book
+git add .
+
+git status
+git log
+
+# git push --force # while on gh-pages
 
 
 # # checkout to the gh-pages branch
