@@ -31,6 +31,10 @@ git clean -fx node_modules
 git clean -fx _book
 git add .
 
+
+git config --local user.name "Fudgedotdotdot"
+git config --local user.email "28399056+Fudgedotdotdot@users.noreply.github.com"
+
 git commit -a -m "Update docs"
 git push origin gh-pages --force
 
